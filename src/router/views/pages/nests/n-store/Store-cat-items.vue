@@ -133,7 +133,9 @@ console.log(form_data)
 this.photos = [this.upd1, this.upd2, this.upd3]
 // Using form data to upload pictures
       const form_data = new FormData();
-    form_data.append("photos", this.photos);
+    form_data.append("img1", this.upd1);
+    form_data.append("img2", this.upd2);
+    form_data.append("img3", this.upd3);
       form_data.append("name", this.item_name);
       form_data.append("price", this.item_price);
        form_data.append("size", this.item_size);

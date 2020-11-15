@@ -70,7 +70,10 @@ const checkJwt = jwt({
 
 
 
-  router.post('/item',  checkJwt, upload.array("photos",3), controller.create);
+  router.post('/item',  checkJwt, upload.fields([{name: 'img1', maxcount: 1},
+  {name: 'img2', maxcount: 1},
+  {name: 'img3', maxcount: 1}
+]) , controller.create);
 
 
 
